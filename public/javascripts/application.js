@@ -6,7 +6,7 @@ require.config({
     'text': 'lib/text',
     'underscore': 'lib/underscore',
     'bootstrap' : 'lib/bootstrap',
-    'marrionette' : 'lib/backbone.marrionette'
+    'marionette' : 'lib/backbone.marionette',
     'less' : 'lib/less',
 
   },
@@ -23,6 +23,10 @@ require.config({
     },
     'jquery-ui' : {
         deps : ["jquery"]
+    },
+    'marionette' : {
+      deps : ["backbone", "underscore", "jquery"],
+      exports: 'Marionette'
     }
   }
 });
@@ -32,10 +36,10 @@ require(
     "underscore",
     "backbone",
     "less",
-    "marrionette"
+    "marionette"
 
   ],
-  function($, _, B, jqueryui, less, Marrionette) {
+  function($, _, B, jqueryui, less, Marionette) {
 
         $(function() {
             console.log("hello world");
