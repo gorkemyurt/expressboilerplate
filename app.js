@@ -8,6 +8,7 @@ var express = require('express')
   , _ = require('underscore')
   , fs = require('fs')
   , path = require('path')
+  , passport = require('passport')
    
 
   var env = process.env.NODE_ENV || 'development'
@@ -24,10 +25,10 @@ var app = require('express')()
   , server = require('http').createServer(app)
 
 // express settings
-require('./config/express')(app, config)
+require('./config/express')(app, config, passport)
 
 // Bootstrap routes
-require('./config/routes')(app)
+require('./config/routes')(app,passport)
 
 // Start the app by listening on <port>
 var port = process.env.PORT || 3000
