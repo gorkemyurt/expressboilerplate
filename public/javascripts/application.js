@@ -7,7 +7,15 @@ require.config({
     'underscore': 'lib/underscore',
     'bootstrap' : 'lib/bootstrap',
     'marionette' : 'lib/backbone.marionette',
+    'localStorage' : 'lib/backbone.localStorage',
     'less' : 'lib/less',
+    'User' : 'models/User',
+    "Users" : 'collections/Users',
+    "FormView" : 'views/FormView',
+    "UsersView" : 'views/UsersView',
+    "UserView" : 'views/UserView',
+    "NoUserView" : 'views/NoUserView',
+    "MyApp" : 'app'
 
   },
   shim: {
@@ -36,15 +44,10 @@ require(
     "underscore",
     "backbone",
     "less",
-    "marionette"
+    "marionette",
+    "MyApp"
 
   ],
-  function($, _, B, jqueryui, less, Marionette) {
+  function($, _, Backbone, jqueryui, less, Marionette, MyApp) {
 
-        $(function() {
-            console.log("hello world");
-
-        });
-  }
-
-);
+  });
