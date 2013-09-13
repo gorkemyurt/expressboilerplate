@@ -12,18 +12,18 @@ var rootPath = path.resolve(__dirname + '../..')
 module.exports = {
   development: {
     root: rootPath,
-    db: 'mongodb://localhost/minidatabase'
+    db: 'mongodb://localhost/nutritionapp'
   },
   test: {
     root: rootPath,
-    db: 'mongodb://localhost/minidatabase'
+    db: 'mongodb://localhost/nutritionapp'
   },
   staging: {
     root: rootPath,
-    db: 'mongodb://heroku_app16691067:4poq3j4f04nqsd9dtt8cjnp5l@ds031978.mongolab.com:31978/heroku_app16691067'
+    db: 'mongodb://heroku_app18100548:eqcjc5ris9praogb1p5r7lasn1@ds043378.mongolab.com:43378/heroku_app18100548'
   },
   production: {
     root: rootPath,
-    db: 'mongodb://heroku_app16691067:4poq3j4f04nqsd9dtt8cjnp5l@ds031978.mongolab.com:31978/heroku_app16691067'
+    db: 'mongodb://heroku_app18100548:eqcjc5ris9praogb1p5r7lasn1@ds043378.mongolab.com:43378/heroku_app18100548'
   }
 }

@@ -11,9 +11,12 @@ var express = require('express')
   , passport = require('passport')
    
 
+
   var env = process.env.NODE_ENV || 'development'
   , config = require('./config/config')[env]
+  , mongoose = require('mongoose')
 
+mongoose.connect(config.db)
 // Bootstrap models
 var models_path = __dirname + '/app/models'
 
@@ -26,6 +29,8 @@ var app = require('express')()
 
 // express settings
 require('./config/express')(app, config, passport)
+
+require('./config/passport')(passport, config)
 
 // Bootstrap routes
 require('./config/routes')(app,passport)
